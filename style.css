@@ -7,6 +7,10 @@
   font-family: 'Raleway', Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .bg {
   position: fixed;
   top: 0;
@@ -23,10 +27,11 @@
   z-index: 1;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  gap: 70px;
+  padding-top: 40px;
 }
 
 .content a {
@@ -44,9 +49,9 @@
   }
 
 .titleContent {
-  font-size: 4.3em;
+  font-size: 3em;
   margin-bottom: 20px;
-  color: #010047;
+  color: #001439;
   font-weight: bold;
   line-height: 1.2;
   max-width: 700px;
@@ -77,7 +82,7 @@ header {
   align-items: center;
   z-index: 100;
   border-bottom: 4px solid #aa7f16;
-  background-color: #010047;
+  background-color: #001439;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 
@@ -170,7 +175,7 @@ li {
 
 #text {
   font-size: 4em;
-  color: #010047;
+  color: #001439;
   text-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -179,12 +184,12 @@ li {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: #010047;
+  background: #001439;
 }
 
 .contentTitleBodyFounder {
   position: relative;
-  background: #010047;
+  background: #001439;
   padding-left: 100px;
   padding-bottom: 100px;
   display: flex;
@@ -201,7 +206,7 @@ li {
 
 .contentBodyFounder {
   position: relative;
-  background: #010047;
+  background: #001439;
   padding-left: 100px;
   padding-bottom: 100px;
   display: flex;
@@ -234,7 +239,7 @@ li {
   font-size: 30px;
   display: inline-block;
   text-decoration: none;
-  color: #010047;
+  color: #001439;
   padding: 6px 10px;
   font-weight: 600;
   background-color: #aa7f16;
@@ -256,7 +261,7 @@ li {
 
 .contentBody {
   position: relative;
-  background: #010047;
+  background: #001439;
   padding-left: 100px;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -370,14 +375,14 @@ li {
   font-size: 3rem;
   letter-spacing: 10px;
   text-align: center;
-  color: #010047;
+  color: #001439;
 }
 
 .descriptionContainerCard {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #010047;
+  color: #001439;
 }
 
 .boxCards {
@@ -512,7 +517,7 @@ li {
   bottom: calc(-100% + 5px);
   width: 100%;
   height: 100%;
-  background-color: #010047;
+  background-color: #001439;
   z-index: 1;
   transition: 0.5s;
 }
@@ -581,7 +586,7 @@ li {
 
 .cardSkills:hover .contentSkills a {
   background-color: #fff; /* Dourado */
-  color: #010047; /* Ajusta a cor do texto para melhor contraste */
+  color: #001439; /* Ajusta a cor do texto para melhor contraste */
   transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza a transição */
 }
 
@@ -589,7 +594,7 @@ li {
 
 .contentContact {
   position: relative;
-  background: #010047;
+  background: #001439;
   /* padding: 100px; */
   gap: 60px;
   display: flex;
@@ -704,7 +709,7 @@ li {
 }
 
 .modal-content {
-  background-color: #010047;
+  background-color: #001439;
   padding: 30px;
   border-radius: 10px;
   max-width: 600px;
