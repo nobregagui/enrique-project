@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artigo - Cavalheiro de Ávila Advogados</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header>
+    <img src="./logoImage.png" alt="" />
+    <div class="navigation">
+      <div class="mobile-close-btn">
+        <span>&times;</span>
+      </div>
+      <ul class="listNavBar">
+        <li>
+          <a href="#nossaEquipe">Nossa equipe</a>
+        </li>
+        <li>
+          <a href="#artigos">Artigos</a>
+        </li>
+        <li>
+          <a href="#areaAtuacao">Área de atuação</a>
+        </li>
+        <li>
+          <a href="#contato">Contato</a>
+        </li>
+      </ul>
+    </div>
+    <div class="socialIcons">
+      <a href="https://www.instagram.com/cavalheirodeavila_advocacia?igsh=dDV0Mm11bTk3N2o4&utm_source=qr" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/enrique-bruno-c-de-%C3%A1vila-ab5450207/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <div class="mobile-overlay"></div>
+
+  <div class="container" style="max-width: 900px; position: relative; margin: 220px auto 40px auto; background: #fff; background-color: #ffffff; padding: 32px; border-radius: 12px; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+    <a href="index.html" style="text-decoration:none; color:#333; font-size:14px;">&larr; Voltar para a página inicial</a>
+    <h1 id="artigoTitle" style="margin-top: 24px;"></h1>
+    <div id="artigoContent" style="font-size: 1.2em; line-height: 1.7;"></div>
+  </div>
+
+  <script>
+    // Lê os dados do artigo do localStorage
+    const title = localStorage.getItem('artigoTitle');
+    const content = localStorage.getItem('artigoContent');
+    if (title && content) {
+      document.getElementById('artigoTitle').textContent = title;
+      
+      // Divide o conteúdo por \n\n e cria parágrafos separados
+      const paragraphs = content.split('\n\n');
+      const contentDiv = document.getElementById('artigoContent');
+      contentDiv.innerHTML = '';
+      
+      paragraphs.forEach(paragraph => {
+        if (paragraph.trim()) {
+          const p = document.createElement('p');
+          p.textContent = paragraph.trim();
+          p.style.marginBottom = '1em';
+          contentDiv.appendChild(p);
+        }
+      });
+      
+      // Limpa para não repetir
+      localStorage.removeItem('artigoTitle');
+      localStorage.removeItem('artigoContent');
+    } else {
+      document.getElementById('artigoTitle').textContent = 'Artigo não encontrado';
+      document.getElementById('artigoContent').textContent = 'Por favor, volte e selecione um artigo.';
+    }
+
+    // Navegação do header: ao clicar, volta para index.html na seção correspondente
+    document.querySelectorAll('.listNavBar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        window.location.href = 'index.html' + href;
+      });
+    });
+  </script>
+</body>
+</html> 
