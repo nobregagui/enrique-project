@@ -37,8 +37,7 @@ html {
   height: 100vh;
   overflow: hidden;
   gap: 70px;
-  padding-top: 40px;
-  flex-wrap: wrap; /* Isso já ajuda em telas menores */
+  padding-top: 165px;
 }
 
 .content a {
@@ -56,8 +55,7 @@ html {
   }
 
   .content img {
-    max-width: 100%;
-    height: auto;
+    max-width: 65%;
     object-fit: contain;
   }
 
@@ -96,8 +94,14 @@ html {
     }
   }
 
+  @media (max-width: 768px) {
+    .content img {
+      max-width: 100%;
+    }
+  }
+
 .titleContent {
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 20px;
   color: #001439;
   font-weight: bold;
@@ -900,6 +904,7 @@ li {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  z-index: 9999;
   background-color: #22c55e; /* equivalente a bg-green-500 */
   color: white;
   border-radius: 9999px;
