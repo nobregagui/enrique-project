@@ -37,7 +37,7 @@ html {
   height: 100vh;
   overflow: hidden;
   gap: 70px;
-  padding-top: 165px;
+  padding-top: 80px;
 }
 
 .content a {
@@ -55,7 +55,7 @@ html {
   }
 
   .content img {
-    max-width: 65%;
+    height: 100%;
     object-fit: contain;
   }
 
@@ -128,7 +128,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 14px 100px;
+  padding: 20px 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -142,6 +142,7 @@ header {
 
 header img {
   transition: all 0.3s ease;
+  max-width: 220px;
 }
 
 .logo {
