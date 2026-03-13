@@ -129,3 +129,40 @@ window.addEventListener('DOMContentLoaded', function() {
     localStorage.removeItem('artigoContent');
   }
 });
+
+(function () {
+  var overlay = document.getElementById('securityAlertOverlay');
+  var closeButton = document.getElementById('securityAlertCloseButton');
+  var confirmButton = document.getElementById('securityAlertConfirmButton');
+
+  if (!overlay || !closeButton || !confirmButton) {
+    return;
+  }
+
+  function closeSecurityAlert() {
+    if (overlay.classList.contains('security-alert-closing')) {
+      return;
+    }
+
+    overlay.classList.add('security-alert-closing');
+
+    window.setTimeout(function () {
+      overlay.style.display = 'none';
+    }, 200);
+  }
+
+  closeButton.addEventListener('click', closeSecurityAlert);
+  confirmButton.addEventListener('click', closeSecurityAlert);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && overlay.style.display !== 'none') {
+      closeSecurityAlert();
+    }
+  });
+
+  overlay.addEventListener('click', function (event) {
+    if (event.target === overlay) {
+      closeSecurityAlert();
+    }
+  });
+})();

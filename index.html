@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,10 +11,133 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="bg"></div>
+    <div class="security-alert-overlay" id="securityAlertOverlay">
+      <div
+        class="security-alert-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="securityAlertTitle"
+      >
+        <div class="security-alert-accent-bar"></div>
+        <button
+          class="security-alert-close"
+          type="button"
+          id="securityAlertCloseButton"
+          aria-label="Fechar aviso"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="security-alert-body">
+          <div class="security-alert-header">
+            <div class="security-alert-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+                ></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h2 class="security-alert-title" id="securityAlertTitle">
+              Aviso Importante aos Clientes
+            </h2>
+          </div>
+
+          <p class="security-alert-text">
+            Tem ocorrido um número crescente de tentativas de golpe conhecidas
+            como <strong>"Golpe do Falso Advogado"</strong>.
+          </p>
+
+          <p class="security-alert-text">
+            Criminosos entram em contato com clientes se passando por advogados
+            ou membros do escritório, utilizando informações reais de processos
+            para solicitar pagamentos indevidos, geralmente via PIX ou
+            transferência bancária, sob a falsa promessa de liberação de valores
+            judiciais.
+          </p>
+
+          <div class="security-alert-highlight">
+            Nosso escritório <strong>NÃO</strong> solicita pagamentos dessa forma
+            e não utiliza números desconhecidos para contato com clientes.
+          </div>
+
+          <p class="security-alert-text">
+            Caso receba qualquer mensagem suspeita, <strong>NÃO realize pagamentos</strong>
+            antes de confirmar diretamente conosco.
+          </p>
+
+          <div class="security-alert-contacts">
+            <div class="security-alert-contacts-label">
+              Canais Oficiais de Atendimento
+            </div>
+            <div class="security-alert-contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              enriquedeavila@cavalheirodeavila.company
+            </div>
+            <div class="security-alert-contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92"
+                ></path>
+              </svg>
+              (11) 96178-9605
+            </div>
+          </div>
+
+          <button class="security-alert-btn" type="button" id="securityAlertConfirmButton">
+            Entendi e continuar no site
+          </button>
+        </div>
+      </div>
+    </div>
     <header>
       <img src="./logoNew.png" alt="" />
       <div class="navigation">
@@ -62,6 +185,187 @@
     >
       </div>
     </div>
+    <section class="security-alert-section">
+      <div class="security-alert-badge">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+          ></path>
+          <path d="m14.5 9-5 5"></path>
+          <path d="m9.5 9 5 5"></path>
+        </svg>
+        Alerta de Segurança
+      </div>
+
+      <h1 class="security-alert-section-title">Alerta de Segurança aos Clientes</h1>
+      <p class="security-alert-section-subtitle">
+        Prevenção contra o golpe do falso advogado
+      </p>
+
+      <div class="security-alert-intro">
+        <p>
+          Nos últimos anos aumentaram os casos de criminosos que se passam por
+          advogados ou escritórios de advocacia para aplicar golpes financeiros.
+          Esses golpistas utilizam informações reais de processos judiciais e
+          entram em contato com as vítimas por telefone, e-mail ou WhatsApp
+          solicitando pagamentos falsos.
+        </p>
+        <p class="security-alert-strong-text">
+          Nosso escritório reforça que nunca solicita depósitos ou transferências
+          inesperadas para liberação de valores judiciais.
+        </p>
+      </div>
+
+      <div class="security-alert-cards-grid">
+        <div class="security-alert-card">
+          <div class="security-alert-card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+              ></path>
+              <path d="m14.5 9-5 5"></path>
+              <path d="m9.5 9 5 5"></path>
+            </svg>
+          </div>
+          <h3 class="security-alert-card-title">Como o golpe funciona</h3>
+          <p class="security-alert-card-text">
+            Criminosos entram em contato se passando por advogados e informam que
+            existe um valor judicial a ser liberado, solicitando pagamento
+            antecipado de taxas ou impostos.
+          </p>
+        </div>
+
+        <div class="security-alert-card">
+          <div class="security-alert-card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+              ></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="security-alert-card-title">Sinais de alerta</h3>
+          <ul class="security-alert-card-list">
+            <li>Urgência para realizar pagamentos</li>
+            <li>Solicitação de PIX ou transferência</li>
+            <li>Contato por número desconhecido</li>
+            <li>Documentos aparentemente oficiais enviados por mensagem</li>
+          </ul>
+        </div>
+
+        <div class="security-alert-card">
+          <div class="security-alert-card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+              ></path>
+              <path d="m12 8v4"></path>
+              <path d="m12 16 .01 0"></path>
+            </svg>
+          </div>
+          <h3 class="security-alert-card-title">Como se proteger</h3>
+          <ul class="security-alert-card-list">
+            <li>Nunca faça pagamentos sem confirmar com o escritório</li>
+            <li>Verifique sempre o número de contato</li>
+            <li>Desconfie de mensagens urgentes</li>
+            <li>Em caso de dúvida, fale diretamente conosco</li>
+          </ul>
+        </div>
+
+        <div class="security-alert-card">
+          <div class="security-alert-card-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+              <path
+                d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"
+              ></path>
+              <path
+                d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"
+              ></path>
+              <path d="M10 6h4"></path>
+              <path d="M10 10h4"></path>
+              <path d="M10 14h4"></path>
+              <path d="M10 18h4"></path>
+            </svg>
+          </div>
+          <h3 class="security-alert-card-title">Canais oficiais do escritório</h3>
+          <div class="security-alert-card-contact">
+            <div class="security-alert-card-contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              enriquedeavila@cavalheirodeavila.company
+            </div>
+            <div class="security-alert-card-contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92"
+                ></path>
+              </svg>
+              (11) 96178-9605
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="contentBody">
       <h2>O ESCRITÓRIO</h2>
       <p>
